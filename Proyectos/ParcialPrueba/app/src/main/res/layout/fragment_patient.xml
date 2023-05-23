@@ -11,14 +11,10 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context = ".ui.pet.PatientFragment">
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            tools:context = ".ui.pet.PatientFragment"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,41 +35,37 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="80sp"
                     android:text="@{viewmodel.name}"
-                    android:textSize="80sp" />
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.type}"
                     android:textSize="40sp"
+                    android:text="@{viewmodel.type}"
+
                     />
                 <TextView
                     android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="40sp"
                     android:text="@{viewmodel.race}"
-                    android:textSize="40sp"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="40sp"
                     android:text="@{viewmodel.gener}"
-                    android:textSize="40sp"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.age}"
                     android:textSize="40sp"
                     android:layout_gravity="right"
+                    android:text="@{viewmodel.age}"
                     />
-
-
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

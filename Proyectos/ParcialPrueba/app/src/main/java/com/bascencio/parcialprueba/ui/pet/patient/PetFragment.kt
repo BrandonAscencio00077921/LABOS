@@ -17,8 +17,8 @@ import com.bascencio.parcialprueba.ui.pet.patient.recyclerview.PetRecyclerViewAd
 
 class PetFragment : Fragment() {
 
-
     private lateinit var adapter: PetRecyclerViewAdapter
+
     private val petViewModel : PetViewModel by activityViewModels {
         PetViewModel.Factory
     }
@@ -39,6 +39,7 @@ class PetFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         setRecyclerView(view)
 
         binding.addButton.setOnClickListener {

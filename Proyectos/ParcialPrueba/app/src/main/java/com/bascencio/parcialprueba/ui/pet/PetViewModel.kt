@@ -17,6 +17,7 @@ class PetViewModel(private val repository: PetRepository) : ViewModel() {
     var race = MutableLiveData("")
     var age = MutableLiveData("")
     var gener = MutableLiveData("")
+    var status = MutableLiveData("")
 
     fun getPets() = repository.getPets()
 
@@ -24,6 +25,7 @@ class PetViewModel(private val repository: PetRepository) : ViewModel() {
 
     fun createPet(){
         if(!validateData()){
+            status.value = WROG_INFORMATION
             return
         }
         val pet = PetModel(
@@ -35,6 +37,7 @@ class PetViewModel(private val repository: PetRepository) : ViewModel() {
             )
         addPets(pet)
         clearData()
+        status.value = PET_CREATED
     }
 
     private fun validateData() : Boolean{
@@ -55,6 +58,10 @@ class PetViewModel(private val repository: PetRepository) : ViewModel() {
         gener.value = ""
     }
 
+    fun clearStatus(){
+        status.value = INACTIVE
+    }
+
     fun setSelectedPet(pet: PetModel){
         type.value = pet.race
         name.value = pet.name
@@ -70,5 +77,9 @@ class PetViewModel(private val repository: PetRepository) : ViewModel() {
                 PetViewModel(app.petRepository)
             }
         }
+
+        const val PET_CREATED = "Pet created"
+        const val WROG_INFORMATION = "Wrong information"
+        const val INACTIVE = ""
     }
 }

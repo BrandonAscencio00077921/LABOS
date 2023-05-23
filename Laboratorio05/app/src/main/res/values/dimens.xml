@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen">16dp</dimen>
+    <dimen name="a">8dp</dimen>
+    <dimen name="r">112dp</dimen>
+    <dimen name="i">83dp</dimen>
+    <dimen name="h">20sp</dimen>
+    <dimen name="f">20sp</dimen>
+    <dimen name="q">20sp</dimen>
+    <dimen name="kkk">20sp</dimen>
+    <dimen name="aaa">83dp</dimen>
+    <dimen name="sss">112dp</dimen>
+    <dimen name="www">8dp</dimen>
+    <dimen name="qqqq">16dp</dimen>
+    <dimen name="hhh">16dp</dimen>
+    <dimen name="eee">25dp</dimen>
+    <dimen name="ssa">16dp</dimen>
+    <dimen name="uu">20sp</dimen>
+    <dimen name="uuu">20sp</dimen>
+    <dimen name="dsdf">20sp</dimen>
+    <dimen name="sdfasdf">20sp</dimen>
+    <dimen name="sdfasd">225dp</dimen>
+    <dimen name="dfsdaf">40sp</dimen>
+    <dimen name="dsfasdf">8dp</dimen>
+    <dimen name="sdfasdffg">8dp</dimen>
+    <dimen name="jkhjk">8dp</dimen>
+    <dimen name="gfhfg">8dp</dimen>
+    <dimen name="cvbxcvb">16dp</dimen>
+</resources>

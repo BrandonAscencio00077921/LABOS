@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.laboratorio05.ui.movie.MovieViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.movie.MovieFragment"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sdfasd"
+            android:scaleType="fitStart"
+            android:src="@drawable/star_wars" />
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="@dimen/sdfasdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.name}"/>
+        <TextView
+            android:textSize="@dimen/uu"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.category}"/>
+        <TextView
+            android:textSize="@dimen/uuu"
+            android:textColor="@color/calification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.qualification}"/>
+        <TextView
+            android:textSize="@dimen/dsdf"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.description}"/>
+    </LinearLayout>
+</layout>
+

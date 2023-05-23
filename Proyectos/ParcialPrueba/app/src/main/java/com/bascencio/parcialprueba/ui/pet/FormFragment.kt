@@ -42,12 +42,25 @@ class FormFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setViewModel()
+        observeStatus()
+    }
 
+    private fun observeStatus() {
+        petViewModel.status.observe(viewLifecycleOwner){
+            status -> when{
+                status.equals(PetViewModel.WROG_INFORMATION)->{
+                    petViewModel.clearStatus()
+                }
+            status.equals(PetViewModel.PET_CREATED)->{
+                petViewModel.clearStatus()
+                findNavController().popBackStack()
+            }
+            }
+        }
     }
 
     private fun setViewModel() {
         binding.viewmodel = petViewModel
-        findNavController().popBackStack()
     }
 
 }
