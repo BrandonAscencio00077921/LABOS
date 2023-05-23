@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/petFragment">
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.bascencio.parcialprueba.ui.pet.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" />
+    <fragment
+        android:id="@+id/patientFragment"
+        android:name="com.bascencio.parcialprueba.ui.pet.PatientFragment"
+        android:label="fragment_patient"
+        tools:layout="@layout/fragment_patient" />
+    <fragment
+        android:id="@+id/petFragment"
+        android:name="com.bascencio.parcialprueba.ui.pet.patient.PetFragment"
+        android:label="fragment_pet"
+        tools:layout="@layout/fragment_pet" >
+        <action
+            android:id="@+id/action_petFragment_to_patientFragment"
+            app:destination="@id/patientFragment" />
+        <action
+            android:id="@+id/action_petFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+    </fragment>
+</navigation>
